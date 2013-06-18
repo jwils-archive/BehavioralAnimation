@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Behavior">
+</Property><Property Name="Solution File" Value="D:\WinDocs\UPenn\Courses\CIS564\Homeworks\2012 - Summer\HW10\Framework\Visual Studio\Behavior\Behavior\Behavior.sln">
+</Property><Property Name="Date" Value="Wednesday, June 20, 2012">
+</Property><Property Name="Time" Value="15:22:58 PM">
+</Property></Properties><Event ErrorLevel="0" Project="Behavior" Source="Behavior.vcproj" Description="Converting project file 'D:\WinDocs\UPenn\Courses\CIS564\Homeworks\2012 - Summer\HW10\Framework\Visual Studio\Behavior\Behavior\Behavior.vcproj'.">
+</Event><Event ErrorLevel="1" Project="Behavior" Source="Behavior.vcproj" Description="VCWebServiceProxyGeneratorTool is no longer supported. The tool has been removed from your project settings.">
+</Event><Event ErrorLevel="0" Project="Behavior" Source="Behavior.vcproj" Description="Done converting to new project file 'D:\WinDocs\UPenn\Courses\CIS564\Homeworks\2012 - Summer\HW10\Framework\Visual Studio\Behavior\Behavior\Behavior.vcxproj'.">
+</Event><Event ErrorLevel="3" Project="Behavior" Source="Behavior.vcproj" Description="Converted">
+</Event></UpgradeLog>
