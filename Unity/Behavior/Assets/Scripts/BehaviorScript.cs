@@ -56,6 +56,7 @@ public class BehaviorScript : MonoBehaviour
 		rigidbody.AddForce(result[0], result[1], result[2]);
 		
 		CalculateTorque(agentID, targetPos, result);
+		Debug.Log (result);
 		rigidbody.AddTorque(result[0], result[1], result[2]); 
 	}
 	

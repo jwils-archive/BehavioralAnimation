@@ -27,11 +27,14 @@ Behavior* Separation::Clone() const
 // within the neighborhood of the agent
 vec3 Separation::CalculateDesiredVelocity(Actor& actor)
 {
+	vec3 vs(0,0,0);
+
     for (unsigned int i = 0; i < m_pAgents.size(); i++)
     {
-   
+		vec3 di = m_pAgents[i].globalPosition - actor.globalPosition;
+		vs += di / (di.Length() * di.Length());
     }
 
-	return vec3(0,0,0);
+	return g_fKSeparation * vs;
 }
 

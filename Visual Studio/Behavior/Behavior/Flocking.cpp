@@ -27,5 +27,9 @@ Behavior* Flocking::Clone() const
 // Flocking combines separation, cohesion, and alignment
 vec3 Flocking::CalculateDesiredVelocity(Actor& actor)
 {
-	return vec3(0,0,0);
+	Separation separation(m_pTarget, m_pAgents);
+	Alignment alignment(m_pTarget, m_pAgents);
+	Cohesion cohesion(m_pAgents);
+
+	return separation.CalculateDesiredVelocity(actor) + alignment.CalculateDesiredVelocity(actor) + cohesion.CalculateDesiredVelocity(actor);
 }

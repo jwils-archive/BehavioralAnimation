@@ -29,12 +29,15 @@ Behavior* Wander::Clone() const
 vec3 Wander::CalculateDesiredVelocity(Actor& actor)
 {
 	// find a random direction
+	vec3 n(rand(),rand(),rand());
+	
 
     // scale it with a noise factor
-
+	n = g_fKNoise * n.Normalize();
 	// change the current velocity to point to a random direction
    
+	vec3 v_w = g_fKWander * n;
 	// scale the new velocity	
 
-	return vec3(0,0,0);
+	return actor.linearVelocity + v_w;
 }

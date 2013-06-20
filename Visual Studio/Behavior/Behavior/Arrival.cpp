@@ -27,6 +27,6 @@ Behavior* Arrival::Clone() const
 // from the target
 vec3 Arrival::CalculateDesiredVelocity(Actor& actor)
 {
-	return g_fKArrival * (actor.globalPosition - m_pTarget);
+	return g_fKArrival * (m_pTarget - actor.globalPosition);
 }
 

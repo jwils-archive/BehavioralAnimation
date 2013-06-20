@@ -27,10 +27,12 @@ Behavior* Alignment::Clone() const
 // Alignment returns an average velocity of all active agents
 vec3 Alignment::CalculateDesiredVelocity(Actor& actor)
 {
+	vec3 v_align(0,0,0);
+
 	for (unsigned int i = 0; i < m_pAgents.size(); i++)
     {
-	
+		v_align += m_pAgents[i].linearVelocity;
 	}
-	return vec3(0,0,0);
+	return g_fKAlignment * v_align / m_pAgents.size();
 }
 

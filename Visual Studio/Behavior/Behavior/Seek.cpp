@@ -24,6 +24,6 @@ Behavior* Seek::Clone() const
 // Seek returns a maximum velocity towards the target
 vec3 Seek::CalculateDesiredVelocity(Actor& actor)
 {
-	return vec3(0,0,0);
+	return (m_pTarget - actor.globalPosition).Normalize() * g_fMaxSpeed;
 }
 

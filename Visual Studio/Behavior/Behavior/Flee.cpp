@@ -23,5 +23,5 @@ Behavior* Flee::Clone() const
 // Flee calculates a a maximum velocity away from the target
 vec3 Flee::CalculateDesiredVelocity(Actor& actor)
 {
-	return vec3(0,0,0);
+	return (actor.globalPosition - m_pTarget).Normalize() * g_fMaxSpeed;
 }

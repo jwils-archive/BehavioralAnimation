@@ -28,11 +28,17 @@ Leader::~Leader()
 // follow the leader without bunching together
 vec3 Leader::CalculateDesiredVelocity(Actor& actor)
 {
+
+	Arrival arrival(m_pTarget);
+
 	if (actor.agentID == 0)  // actor is the leader
     {
+		return arrival.CalculateDesiredVelocity(actor);
 	}
     else
     {
+		Separation separation(m_pTarget, m_pAgents);
+
+		return 0.7 * separation.CalculateDesiredVelocity(actor) + 0.3 * arrival.CalculateDesiredVelocity(actor);
 	}
-    return vec3(0,0,0);
 }

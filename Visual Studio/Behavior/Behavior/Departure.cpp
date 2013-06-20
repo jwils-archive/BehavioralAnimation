@@ -27,5 +27,5 @@ Behavior* Departure::Clone() const
 // distance from the target
 vec3 Departure::CalculateDesiredVelocity(Actor& actor)
 {
-	return vec3(0,0,0);
+	return g_fKDeparture * (actor.globalPosition - m_pTarget);
 }
